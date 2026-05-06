@@ -18,9 +18,9 @@
             --whatsapp-hover: #128C7E;
             --zone-bg: #f1f5f9;
             --zone-border: #e2e8f0;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 10px 25px rgba(2, 132, 199, 0.15);
-            --radius: 16px;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 20px rgba(2, 132, 199, 0.12);
+            --radius: 10px; /* Más pequeño */
         }
 
         * {
@@ -33,11 +33,11 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
-            line-height: 1.6;
-            padding-bottom: 2rem;
+            line-height: 1.4; /* Menos interlineado */
+            padding-bottom: 1rem;
             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
             background-size: 20px 20px;
-            position: relative; /* Necessary for menu positioning */
+            position: relative;
         }
 
         .container {
@@ -50,8 +50,8 @@
         header {
             position: relative;
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 4rem 2rem;
+            margin-bottom: 1.5rem; /* Menos espacio abajo */
+            padding: 2rem 1rem; /* Header más delgado */
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/portada.jpg');
             background-size: cover;
             background-position: center;
@@ -63,24 +63,24 @@
 
         @media (max-width: 600px) {
             header {
-                padding: 3rem 1rem;
+                padding: 1.5rem 1rem;
                 border-radius: 0; 
             }
         }
 
         .logo-container {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem;
             position: relative;
             z-index: 2;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 70px; /* Logo más pequeño */
+            height: 70px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             background-color: #fff;
             transition: transform 0.3s ease;
         }
@@ -90,61 +90,61 @@
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.6rem; /* Letra más pequeña */
             color: #ffffff;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
             position: relative;
             z-index: 2;
         }
 
         header p {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
+            font-size: 0.9rem; /* Letra más pequeña */
             font-weight: 500;
-            text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
             position: relative;
             z-index: 2;
         }
 
         /* BUSCADOR */
         .search-container {
-            margin-top: -1.5rem; 
-            margin-bottom: 2rem;
+            margin-top: -1rem; 
+            margin-bottom: 1.5rem;
             position: relative;
             z-index: 10;
         }
 
         #searchInput {
             width: 100%;
-            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            padding: 0.8rem 1rem 0.8rem 2.8rem; /* Buscador más delgado */
             border-radius: 50px;
             border: none;
             background-color: var(--card-bg);
             color: var(--text-primary);
-            font-size: 1.1rem;
+            font-size: 0.95rem; /* Letra más pequeña */
             outline: none;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         #searchInput:focus {
-            box-shadow: 0 15px 30px rgba(2, 132, 199, 0.2);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.15);
         }
 
         .search-icon {
             position: absolute;
-            left: 1.5rem;
+            left: 1rem;
             top: 50%;
             transform: translateY(-50%);
             color: var(--accent);
-            font-size: 1.3rem;
+            font-size: 1.1rem; /* Icono más pequeño */
         }
 
         /* SECCIONES Y TARJETAS */
         .zone-section {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem; /* Menos espacio entre zonas */
             border-radius: var(--radius);
             background-color: var(--card-bg);
             box-shadow: var(--shadow);
@@ -156,14 +156,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Título de zona más pequeño */
             font-weight: 600;
-            padding: 1.2rem 1.5rem;
+            padding: 0.8rem 1.2rem; /* Menos padding */
             background-color: var(--card-bg);
             color: var(--text-primary);
             cursor: pointer;
             transition: all 0.3s ease;
-            border-left: 5px solid var(--accent);
+            border-left: 4px solid var(--accent);
         }
 
         .zone-title:hover {
@@ -171,7 +171,7 @@
         }
 
         .zone-title .toggle-icon {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             transition: transform 0.4s;
             color: var(--accent);
         }
@@ -182,9 +182,9 @@
 
         .grid {
             display: none;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Tarjetas más compactas */
+            gap: 1rem; /* Menos espacio entre tarjetas */
+            padding: 1rem; /* Menos padding interno */
             background-color: #f8fafc;
             border-top: 1px solid var(--zone-border);
         }
@@ -195,14 +195,14 @@
         }
 
         @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
+            from { opacity: 0; transform: translateY(-5px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .card {
             background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
+            padding: 1rem; /* Menos padding en tarjeta */
+            border-radius: var(--radius);
             border: 1px solid var(--zone-border);
             transition: all 0.3s ease;
             display: flex;
@@ -211,51 +211,51 @@
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-hover);
             border-color: var(--accent);
         }
 
         .card-info h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem; /* Letra más pequeña */
             color: var(--text-primary);
         }
 
         .card-info p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.8rem; /* Letra más pequeña */
+            margin-bottom: 0.8rem; /* Menos margen inferior */
             display: flex;
             align-items: center;
         }
 
         .card-info p span {
-            margin-right: 0.5rem;
+            margin-right: 0.4rem;
             color: var(--accent);
         }
 
         /* BOTONES DE ACCIÓN */
         .card-actions {
             display: flex;
-            gap: 0.25rem; /* Reduced gap */
-            margin-top: 0.5rem;
-            align-items: center; /* Crucial for vertical alignment of tiny menu */
+            gap: 0.4rem;
+            margin-top: 0.3rem;
+            align-items: center;
         }
 
         .btn-location {
             flex: none;
-            width: calc(100% - 36px); /* Adjust width to make tiny button bigger by remaining space */
+            width: calc(100% - 34px); 
             display: inline-flex;
             align-items: center;
             justify-content: center;
             background-color: var(--accent);
             color: white;
-            padding: 0.8rem;
-            border-radius: 10px;
+            padding: 0.6rem; /* Botón más delgado */
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Texto de botón más pequeño */
             transition: all 0.3s;
         }
 
@@ -266,10 +266,10 @@
 
         /* TINY SHARE TRIGGER BUTTON */
         .btn-share-trigger {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            border: 1px solid #d1d5db; /* Light grey border */
+            width: 30px; /* Más pequeño */
+            height: 30px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db; 
             color: var(--text-secondary);
             background-color: transparent;
             cursor: pointer;
@@ -279,7 +279,7 @@
             justify-content: center;
             padding: 0;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .btn-share-trigger:hover {
@@ -290,23 +290,23 @@
 
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
+            margin-top: 1.5rem; /* Menos margen arriba */
+            padding: 1.5rem 1rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Letra más pequeña */
         }
 
         /* GLOBAL POPUP MENU */
         .share-menu {
             position: absolute;
-            display: none; /* Hidden by default */
+            display: none; 
             background-color: var(--card-bg);
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             z-index: 1000;
             overflow: hidden;
             border: 1px solid var(--zone-border);
-            min-width: 180px;
+            min-width: 160px; /* Menú más angosto */
         }
 
         .share-menu.active {
@@ -324,11 +324,11 @@
             align-items: center;
             width: 100%;
             text-align: left;
-            padding: 0.75rem 1rem;
+            padding: 0.6rem 0.8rem; /* Menos padding interno */
             border: none;
             background: transparent;
             color: var(--text-primary);
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Letra más pequeña */
             cursor: pointer;
             transition: background-color 0.2s;
         }
@@ -338,8 +338,8 @@
         }
 
         .menu-icon {
-            margin-right: 0.75rem;
-            font-size: 1.1rem;
+            margin-right: 0.6rem;
+            font-size: 1rem;
             color: var(--accent);
         }
         .menu-icon.whatsapp-icon {
@@ -348,18 +348,18 @@
 
         #toast {
             visibility: hidden;
-            min-width: 250px;
+            min-width: 200px;
             background-color: #333;
             color: #fff;
             text-align: center;
             border-radius: 50px;
-            padding: 16px;
+            padding: 12px 16px;
             position: fixed;
             z-index: 2000;
             left: 50%;
             bottom: 30px;
             transform: translateX(-50%);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             opacity: 0;
             transition: opacity 0.3s, visibility 0.3s;
@@ -542,8 +542,9 @@
                         <p><span>📍</span> Vinto</p>
                     </div>
                     <div class="card-actions">
-                        <a href="https://www.google.com/maps?q=-17.9757392,-67.0498992" target="_blank" class="btn-location">📍 Ver en Mapa</a>
-                        <button class="btn-share-trigger" title="Compartir u Opciones" data-church="Cristo es la Única Esperanza - Emanuel" data-url="https://www.google.com/maps?q=-17.9757392,-67.0498992">⋮</button>
+                        <!-- LINK ACTUALIZADO AQUÍ -->
+                        <a href="https://maps.app.goo.gl/48JNRX4w1fbMZDb1A" target="_blank" class="btn-location">📍 Ver en Mapa</a>
+                        <button class="btn-share-trigger" title="Compartir u Opciones" data-church="Cristo es la Única Esperanza - Emanuel" data-url="https://maps.app.goo.gl/48JNRX4w1fbMZDb1A">⋮</button>
                     </div>
                 </div>
             </div>
@@ -637,7 +638,7 @@
                 }
                 
                 // Position horizontally, aligned to the right of the container
-                globalMenu.style.left = `${rect.right + window.scrollX - 180}px`;
+                globalMenu.style.left = `${rect.right + window.scrollX - 160}px`;
 
                 // 3. Show menu
                 globalMenu.classList.add('active');
